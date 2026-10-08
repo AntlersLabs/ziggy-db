@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace AntlersLabs\ZiggyDb;
 
-use AntlersLabs\ZiggyDb\Console\Commands\ZiggyDbCommand;
+use AntlersLabs\ZiggyDb\Console\Commands\DoctorCommand;
+use AntlersLabs\ZiggyDb\Console\Commands\VerifyCommand;
 use Illuminate\Support\ServiceProvider;
 
 class ZiggyDbServiceProvider extends ServiceProvider
@@ -33,7 +34,8 @@ class ZiggyDbServiceProvider extends ServiceProvider
         ], ['ziggy-db', 'ziggy-db-config']);
 
         $this->commands([
-            ZiggyDbCommand::class,
+            DoctorCommand::class,
+            VerifyCommand::class,
         ]);
     }
 }
